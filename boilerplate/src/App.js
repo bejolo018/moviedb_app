@@ -5,13 +5,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom'
 import Home from './Views/Home'
 import About from './Views/About'
 import Product from './Views/Product'
-
+import Movie from './Views/Movie'
 function App() {
+
   return (
     <div className="relative pb-10 min-h-screen">
       <Router>
@@ -19,13 +19,17 @@ function App() {
       <div className="p-3">
       <Switch>
         <Route exact path="/">
-          <Home />
+          {/* <Home /> */}
+          {/* <Movie /> */}
         </Route>
         <Route exact path="/about">
           <About />
         </Route>
         <Route path="/products/:id">
           <Product />
+        </Route>
+        <Route path="/movies/:id">
+          <Movie />
         </Route>
       </Switch>
 
