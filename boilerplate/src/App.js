@@ -7,9 +7,12 @@ import {
   Route,
 } from 'react-router-dom'
 import Home from './Views/Home'
+import Home2 from './Views/Home2'
 import About from './Views/About'
 import Product from './Views/Product'
 import Movie from './Views/Movie'
+
+
 function App() {
 
   return (
@@ -19,8 +22,7 @@ function App() {
       <div className="p-3">
       <Switch>
         <Route exact path="/">
-          {/* <Home /> */}
-          {/* <Movie /> */}
+          <Home2 />
         </Route>
         <Route exact path="/about">
           <About />

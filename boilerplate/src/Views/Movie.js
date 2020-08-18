@@ -9,7 +9,7 @@ function Movie() {
     const { id } = useParams()
 
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=50a3a9b623d9653744d4ff243885d5e1`
-
+    
     let movie = useAxiosGet(url)
 
     let content = null
@@ -27,7 +27,10 @@ function Movie() {
         content =
             <div>
                 <h1 className="text-2xl font-bold mb-3">
-                    {movie.data.title}
+                    {movie.data.title}                      
+                </h1>
+                <h1 className="text-2xl .font-semibold mb-3">
+                {movie.data.tagline}
                 </h1>
                 <div>
                     <img
@@ -35,12 +38,12 @@ function Movie() {
                         alt={movie.data.title}
                     />
                 </div>
-                {/* <div className="font-bold text-xl mb-3">
-                    $ {movie.data.price}
+                <div className="max-w-md">
+                    {movie.data.overview}
                 </div>
                 <div>
-                    {movie.data.description}
-                </div> */}
+                    {movie.data.review}
+                </div>
                 
             </div>
         )
